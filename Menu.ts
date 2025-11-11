@@ -106,41 +106,39 @@ export function main() {
             case 3:
                 console.log(colors.fg.whitestrong, "\n\nConsultar dados da Conta - por número\n\n", colors.reset);
 
+                console.log("Digite o numero da Conta: ")
+                numero = readlinesync.questionInt("");
+                contas.procurarPorNumero(numero);
+
                 keyPress()
                 break;
             case 4:
-                console.log(colors.fg.whitestrong,
-                    "\n\nAtualizar dados da Conta\n\n", colors.reset);
+                console.log(colors.fg.whitestrong, "\n\nAtualizar dados da Conta\n\n", colors.reset);
 
                 keyPress()
                 break;
             case 5:
-                console.log(colors.fg.whitestrong,
-                    "\n\nApagar uma Conta\n\n", colors.reset);
+                console.log(colors.fg.whitestrong, "\n\nApagar uma Conta\n\n", colors.reset);
 
                 keyPress()
                 break;
             case 6:
-                console.log(colors.fg.whitestrong,
-                    "\n\nSaque\n\n", colors.reset);
+                console.log(colors.fg.whitestrong, "\n\nSaque\n\n", colors.reset);
 
                 keyPress()
                 break;
             case 7:
-                console.log(colors.fg.whitestrong,
-                    "\n\nDepósito\n\n", colors.reset);
+                console.log(colors.fg.whitestrong, "\n\nDepósito\n\n", colors.reset);
 
                 keyPress()
                 break;
             case 8:
-                console.log(colors.fg.whitestrong,
-                    "\n\nTransferência entre Contas\n\n", colors.reset);
+                console.log(colors.fg.whitestrong, "\n\nTransferência entre Contas\n\n", colors.reset);
 
                 keyPress()
                 break;
             default:
-                console.log(colors.fg.whitestrong,
-                    "\nOpção Inválida!\n", colors.reset);
+                console.log(colors.fg.whitestrong, "\nOpção Inválida!\n", colors.reset);
 
                 keyPress()
                 break;

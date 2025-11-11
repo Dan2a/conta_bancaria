@@ -18,6 +18,16 @@ export class ContaController implements ContaRepository {
         console.log(colors.fg.green, "\nA conta número: " + conta.numero + " foi criada com sucesso!", colors.reset)
     }
 
+    procurarPorNumero(numero: number): void {
+        let buscaConta = this.buscarNoArray(numero);
+
+        if (buscaConta != null) {
+            buscaConta.visualizar();
+        } else {
+            console.log(colors.fg.red, "\nA Conta numero: " + numero + "não foi encontrada", colors.reset);
+        }
+    }
+
     // Metodos Auxiliares
 
     // Gera número da conta
@@ -25,5 +35,13 @@ export class ContaController implements ContaRepository {
         return ++this.numero;
     }
 
+    // Checa se uma conta existe
+    public buscarNoArray(numero: number): Conta | null {
+        for (let conta of this.listaContas) {
+            if (conta.numero === numero)
+                return conta;
+        }
 
+        return null;
+    }
 }
