@@ -3,7 +3,7 @@ import readlinesync = require("readline-sync");
 import { colors } from './src/util/Colors';
 import { Conta } from './src/model/Conta';
 import { ContaCorrente } from "./src/model/ContaCorrente";
-import { ContaController } from './src/model/ContaController';
+import { ContaController } from './src/controller/ContaController';
 
 export function main() {
 

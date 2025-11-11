@@ -50,6 +50,19 @@ export class ContaController implements ContaRepository {
         }
     }
 
+    sacar(numero: number, valor: number): void {
+        throw new Error("Method not implemented.");
+    }
+
+    depositar(numero: number, valor: number): void {
+        throw new Error("Method not implemented.");
+    }
+
+    transferir(numeroOrigem: number, numeroDestino: number, valor: number): void {
+        throw new Error("Method not implemented.");
+    }
+
+
     // Metodos Auxiliares
 
     // Gera número da conta
