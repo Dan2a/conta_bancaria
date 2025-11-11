@@ -28,6 +28,17 @@ export class ContaController implements ContaRepository {
         }
     }
 
+    atualizar(conta: Conta): void {
+        let buscaConta = this.buscarNoArray(conta.numero);
+
+        if (buscaConta != null) {
+            this.listaContas[this.listaContas.indexOf(buscaConta)] = conta;
+            console.log(colors.fg.green, "\nAconta numero: " + conta.numero + " Foi atualizada com sucesso!", colors.reset)
+        } else {
+            console.log(colors.fg.red, "\nA Conta numero: " + conta.numero + " não foi encontrada!", colors.reset);
+        }
+    }
+
     // Metodos Auxiliares
 
     // Gera número da conta
